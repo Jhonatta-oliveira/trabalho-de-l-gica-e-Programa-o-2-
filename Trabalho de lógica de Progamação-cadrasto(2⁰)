@@ -1,0 +1,263 @@
+nome=[]
+cpf=[]
+endereco=[]
+telefonef=[]
+celular=[]
+sexo=[]
+data=[]
+email=[]
+emeila=[]
+senha=[]
+
+
+dados=0
+
+a=0
+i=0
+while i<50:
+	
+	print( "                MENU PRINCIPAL              ")
+	opcao=int(input(" 1 - Cadastro \n 2 - Ler \n 3 - Atualizar \n 4 - Deletar \n 5 - Sair \n \n OPÇÃO:  "))
+
+	if opcao==1:
+		i=i+1
+		print("\n-------------------CADASTRO----------------------")
+		reg = int(input('Quantos registros de cadastro: '))
+		r = 0		
+		while r < reg:
+			print('CADASTRO ',r+1)
+			nome.append(input("\nNome: "))
+			cpf.append(input("\nCPF: "))
+			endereco.append(input("\nEndereço: "))
+			telefonef.append(input("\nTelefone fixo: "))
+			celular.append(input("\nCelular: "))
+			sexo.append(input("\nSexo: "))
+			data.append(input("\nData de nascimento: "))
+			email.append(input("\nE-mail: "))
+			emeila.append(input("\nConfirme seu E-mail: "))
+			if emeila != email:
+				print("E-MAIL INCORRETO")
+				emaila = (input("Digite novamente seu E-mail: "))
+			elif emeila == email:
+				print("E-MAIL CORRETO")
+			
+			senha.append(input("\nSenha: "))
+			senha_atual = (input("\nConfirme sua senha: "))
+			if senha_atual != senha:
+				print("SENHA INCORRETA")
+				senha_atual = (input("Digite novamente sua senha: "))
+			elif senha_atual == senha:
+				print("SENHA CORRETA")
+			print('Confirmar dados?\n 1-Sim\n 2-Não')
+			cfm = int(input())
+			if cfm == 1:
+				r+=1
+			else:
+				nome.pop(r)
+				cpf.pop(r)
+				endereco.pop(r)
+				telefonef.pop(r)
+				celular.pop(r)
+				sexo.pop(r)
+				data.pop(r)
+				email.pop(r)
+				emeila.pop(r)
+				senha.pop(r)
+			print('DADOS')
+			while dados < len(nome):
+				print('Registro ', dados+1)
+				print("Nome:",nome[dados])
+				print("CPF:",cpf[dados])
+				print("Endereço:",endereco[dados])
+				print("Telefone fixo:",telefonef[dados])
+				print("Celular:",celular[dados])
+				print("Sexo:",sexo[dados])
+				print("Data de nascimento:",data[dados])
+				print("E-mail:",email[dados])
+				print("Senha:",senha[dados])
+				print("____________________")
+				dados += 1
+			
+			
+		print("____________________")
+	elif opcao==2:
+		i=i+1
+		print("\n---------------------------LER------------------------------")
+		for element in range(len(nome)):
+			print('REGISTRO ', element+1)
+			print("Nome:",nome[element])
+			print("CPF:",cpf[element])
+			print("Endereço:",endereco[element])
+			print("Telefone fixo:",telefonef[element])
+			print("Celular:",celular[element])
+			print("Sexo:",sexo[element])
+			print("Data de nascimento:",data[element])
+			print("E-mail:",email[element])
+			print("Senha:",senha[element])
+			print("____________________")
+	 
+	   
+	elif opcao==3:
+		i=i+1
+	
+		print("\n--------------QUAL REGISTRO GOSTARIA DE  ATUALIZAR?-------------")
+	
+		for element in range(len(nome)):
+			print('REGISTRO ', element+1)
+			print("Nome:",nome[element])
+			print("CPF:",cpf[element])
+			print("Endereço:",endereco[element])
+			print("Telefone fixo:",telefonef[element])
+			print("Celular:",celular[element])
+			print("Sexo:",sexo[element])
+			print("Data de nascimento:",data[element])
+			print("E-mail:",email[element])
+			print("Senha:",senha[element])
+			print("____________________")
+		print('--> Digite 0 para atualizar todos os registros! \n')
+		x=int(input("Opção: "))
+
+		print("\n-------------------ATUALIZE SEU CADASTRO--------------------")
+		if x == 0:
+					Ln = nome
+					Le = cpf
+					Ls = endereco
+					Lc = telefonef
+					Lnu = celular
+					L1=sexo
+					L2=data
+					L3=email
+					L4=emeila
+					L5=senha
+					
+					nome=[]
+					cpf=[]
+					endereco=[]
+					telefonef=[]
+					celular=[]
+					sexo=[]
+					data=[]
+					email=[]
+					emeila=[]
+					senha=[]
+					
+					
+					for h in range(len(Ln)):
+						print('CADASTRO ',h+1)
+						nome.append(input('Novo nome: '))
+						cpf.append(input("Novo cpf: "))
+						endereco.append(input("Novo endereço: "))
+						telefonef.append(input("Novo Telefone: "))
+						celular.append(input("Novo celular: "))
+						sexo.append(input('Novo sexo: '))
+						data.append(input('Nova data: '))
+						email.append(input('Novo email: '))
+						emeila.append(input('Confirmar email: '))
+						senha.append(input('Nova senha: '))
+		else:
+				a = nome[x-1]
+				b = cpf[x-1]
+				c = endereco[x-1]
+				d = telefonef[x-1]
+				e = celular[x-1]
+				f=sexo[x-1]
+				g=data[x-1]
+				k=email[x-1]
+				l=emeila[x-1]
+				m=senha[x-1]
+						
+				print('Atualizar registro ',x,':')
+				nome[x-1] = input('Novo nome: ')
+				cpf[x-1] = input('Novo cpf: ')
+				endereco[x-1] = input('Novo endereço: ')
+				telefonef[x-1] = input('Novo telefone: ')
+				celular[x-1] = input('Novo celular: ')
+				sexo[x-1]=input('Novo sexo: ')
+				data[x-1]=input('Nova data: ')
+				email[x-1]=input('Novo email: ')
+				emeila[x-1]=input('Confirmar email: ')
+				senha[x-1]=input('senha: ')
+						
+				#falta fz
+				atual = int(input('Atualizar dados? 1 - Sim  2 - Não '))
+				if atual == 1:
+					print('ATUALIZADO !')
+				elif atual == 2 and at == 0:
+					nome=Ln
+					cpf=Le
+					endereco=Ls
+					telefonef=Lc
+					celular=Lnu
+					sexo=L1
+					data=L2
+					email=L3 
+					emeila=L4
+					senha=L5
+					print('NÃO ATUALIZADO !')
+				elif atual == 2 and at != 0:
+					nome[x-1] = a
+					cpf[x-1] = b
+					endereco[x-1] = c					
+					telefonef[x-1] = d
+					celular[x-1] = e
+					sexo[x-1]=f
+					data[x-1]=g
+					email[x-1]=k
+					emeila[x-1]=l
+					senha[x-1]=m
+					print('NÃO ATUALIZADO !')	
+
+	if opcao==4:
+		i=i+1
+		print("\n--------------QUAL REGISTRO VOCÊ DESEJA DELETAR?---------------")
+		print('Registro - [Opção]')
+		for element in range(len(nome)):
+			print('REGISTRO - ', element+1)
+			print("Nome:",nome[element])
+			print("CPF:",cpf[element])
+			print("Endereço:",endereco[element])
+			print("Telefone fixo:",telefonef[element])
+			print("Celular:",celular[element])
+			print("Sexo:",sexo[element])
+			print("Data de nascimento:",data[element])
+			print("E-mail:",email[element])
+			print("Senha:",senha[element])
+			print("____________________")
+		print('--> Digite 0 para apagar todos os registros! \n')
+		x = int(input("Escolha a sua opção: "))
+		if x==0:
+			nome=[]
+			cpf=[]
+			endereco=[]
+			telefonef=[]
+			celular=[]
+			sexo=[]
+			data=[]
+			email=[]
+			emeila=[]
+			senha=[]
+		else:
+			nome.pop(x-1)
+			cpf.pop(x-1)
+			endereco.pop(x-1)					
+			telefonef.pop(x-1)
+			celular.pop(x-1)
+			sexo.pop(x-1)
+			data.pop(x-1)
+			email.pop(x-1)
+			emeila.pop(x-1)
+			senha.pop(x-1)
+			
+	if opcao==5:
+		i=i+1
+		print("\n------------------DESEJA SAIR DO CADASTRO?------------------")
+		print("1 - SIM")
+		print("2 - NÃO")
+		es = int(input("Digite sua opção: "))
+		if  es==1:
+			print("Você saiu do cadastRo. ")
+		i=i+51
+	if opcao>=6:
+		print("\n!!!ESSA OPÇÃO NÃO EXISTE, DIGITE UMA OPÇÃO DO MENU PRINCIPAL!!!")
+		print("____________________")
+		i=i+1
